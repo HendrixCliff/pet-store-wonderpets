@@ -21,11 +21,17 @@ export default function Search() {
 
     return (
             <form className="relative ml-5 w-1/4 "  onSubmit={handleSubmit}>
-                <Input  className="font-bold bg-[#ffffff] max-lg:text-lg text-2xl 
+                <Input  className="font-bold max-lg:hidden flex  bg-[rgb(255,255,255)]  text-2xl 
                 text-[#000000] w-full"
                 value={search}  type="text"   onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search for images"/>
-               <BsSearchHeartFill  className="absolute right-0 top-1" size={35}/> 
+               <BsSearchHeartFill  className="absolute max-lg:hidden right-0 top-1" size={35}/> 
+           
+               <Input  className="font-bold hidden w-[8em] max-lg:flex bg-[#ffffff] text-[1rem]  
+                text-[#000000]"
+                value={search}  type="text"   onChange={(e) => setSearch(e.target.value)}
+                placeholder="Search for images"/>
+                <BsSearchHeartFill  className="absolute max-lg:flex hidden right-2 top-1" size={28}/> 
             </form>
     )
 }

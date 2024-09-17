@@ -7,7 +7,7 @@ type Props = {
 }
 
 export function generateMetadata({ params: {myParams}}: Props) {
-      const topic = myParams?.[0] ?? "search"
+      const topic = myParams?.[0] ?? "pet"
       const page = myParams?.[1] ?? "1"
     return {
             title: `Results for ${topic} - Page ${page}`,

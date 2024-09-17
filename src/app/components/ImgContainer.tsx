@@ -11,7 +11,7 @@ export default function ImgContainer({ photo }: Props) {
     const galleryHeight = Math.ceil(250 * widthHeightRatio)
      const photoSpans = Math.ceil(galleryHeight / 10) * 1
     return (
-        <div  className="w-[250px] mt-20 justify-self-center"
+        <div  className="w-[250px] mt-20 max-lg:[3em] justify-self-center"
         style={{gridRow: `span ${photoSpans}`}}>
             <Link href={photo.url} target="_blank" className="grid place-content-center">
            <div className="rounded-xl overflow-hidden group">

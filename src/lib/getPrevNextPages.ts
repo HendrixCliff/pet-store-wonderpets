@@ -8,9 +8,11 @@ function getPageNumber(url: string) {
 
 export default function getPrevNextPage(images: ImagesResults) {
 
-    let nextPage = images?.next_page? getPageNumber(images.next_page)
+    let nextPage = images?.next_page
+     ? getPageNumber(images.next_page)
     : null
-    const prevPage = images?.prev_page? getPageNumber(images.prev_page)
+    const prevPage = images?.prev_page
+     ? getPageNumber(images.prev_page)
     : null
 
     const totalPages = images.total_results % images.per_page
