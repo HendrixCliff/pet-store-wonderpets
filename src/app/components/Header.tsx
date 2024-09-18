@@ -24,17 +24,17 @@ import {IoMdMenu} from "react-icons/io"
     // }
     return (
         <header className="bg-[#090c9b] mb-[5em] max-lg:mb-[3em] w-full max-lg:h-32 h-44 fixed items-center  backdrop-blur-md z-20 ">
-            <section className="flex mt-1 items-center max-lg:gap-[1em] gap-32 max-lg:px-[0.4em] px-5">
+            <section className="flex mt-1 items-center max-md:w-[0em] max-lg:gap-[1.5em] gap-32 max-lg:px-[0.4em] px-5">
                 <NavLink  className="font-mono flex max-lg:hidden hover:text-[#ffffff] items-center  text-[#e0c83d]" href="/">
                 <GiImperialCrown size={130} />
                 <h3 className=" text-[3rem] font-mono mt-[1em] font-bold">Monarch</h3>
                 </NavLink>
                 <NavLink  className=" font-mono flex-col  items-center mb-1 text-[1.5rem] hidden  max-lg:flex  hover:text-[#ffffff]  text-[#e0c83d]" href="/">
-                <GiImperialCrown size={80} />
-                <h3 className="mt-1 text-[1.3rem] h-10 w-10 mr-5 font-bold">Monarch</h3>
+                <GiImperialCrown size={70} />
+                <h3 className="mt-1 text-[1.1rem] h-10 w-10 mr-3 font-bold">Monarch</h3>
                 </NavLink>
                 <Search/>
-                <nav className="flex text-[gold] max-lg:ml-[0.5em] ml-36 items-center max-lg:gap-[.7em] max-md:gap-[.2em] gap-10 max-lg:text-[1rem] text-lg font-bold">
+                <nav className="flex text-[gold] max-lg:ml-[1em] ml-36 items-center max-lg:gap-[1.3em] max-md:gap-[0em] max-md:ml-[0em] gap-10 max-lg:text-[1rem] text-lg font-bold">
                     <HoverCard>
                         <HoverCardTrigger className="flex hover:text-[#ffffff] text-center items-center ">
                        <section className="flex flex-col max-lg:hidden"><h3> 24/7</h3> <h3>Help</h3> </section>  <FaRocketchat className="flex max-lg:hidden" size={35}/>
@@ -85,7 +85,7 @@ import {IoMdMenu} from "react-icons/io"
                 </nav>
             </section>
             <section className="">
-            <nav className=" text-[gold] flex  max-lg:hidden mb-2 gap-[5em] px-[3em]  items-center text-xl font-bold">
+            <nav className=" text-[gold] flex  max-lg:hidden mb-2 gap-[6em] px-[3em]  items-center text-xl font-bold">
                 <NavLink className="hover:text-[#ffffff]"  href="/dog">
                   Dogs
                  </NavLink>
