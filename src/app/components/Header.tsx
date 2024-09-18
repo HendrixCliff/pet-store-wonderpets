@@ -85,7 +85,7 @@ import {IoMdMenu} from "react-icons/io"
                 </nav>
             </section>
             <section className="">
-            <nav className=" text-[gold] flex  max-lg:hidden mb-2 gap-[7em] px-20  items-center text-xl font-bold">
+            <nav className=" text-[gold] flex  max-lg:hidden mb-2 gap-[5em] px-[3em]  items-center text-xl font-bold">
                 <NavLink className="hover:text-[#ffffff]"  href="/dog">
                   Dogs
                  </NavLink>
