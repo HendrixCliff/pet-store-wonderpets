@@ -6,6 +6,12 @@ import {
     HoverCardContent,
     HoverCardTrigger,
   } from "@/components/ui/hover-card"
+  import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+  } from "@/components/ui/popover"
+  import { Button } from "@/components/ui/button"
 import  {FaShoppingCart} from "react-icons/fa"
  import  {GiImperialCrown} from "react-icons/gi"
 import {RiAccountCircleFill} from "react-icons/ri"
@@ -14,6 +20,7 @@ import { Badge } from "@/components/ui/badge"
 import {IoMdMenu} from "react-icons/io"
 //  import {useState} from "react"
  import Search from "../components/Search"
+ 
 
 
   export default function Header() {
@@ -34,7 +41,7 @@ import {IoMdMenu} from "react-icons/io"
                 <h3 className="mt-1 text-[1.1rem] h-10 w-10 mr-3 font-bold">Monarch</h3>
                 </NavLink>
                 <Search/>
-                <nav className="flex text-[gold] max-lg:ml-[1em] ml-36 items-center max-lg:gap-[1.3em] max-md:gap-[0em] max-md:ml-[0em] gap-10 max-lg:text-[1rem] text-lg font-bold">
+                <nav className="flex text-[gold] max-lg:ml-[1em] ml-36 items-center max-lg:gap-[2.7em] max-md:gap-[0em] max-md:ml-[0em] gap-10 max-lg:text-[1rem] text-lg font-bold">
                     <HoverCard>
                         <HoverCardTrigger className="flex hover:text-[#ffffff] text-center items-center ">
                        <section className="flex flex-col max-lg:hidden"><h3> 24/7</h3> <h3>Help</h3> </section>  <FaRocketchat className="flex max-lg:hidden" size={35}/>
@@ -69,19 +76,19 @@ import {IoMdMenu} from "react-icons/io"
                     <FaShoppingCart  size={20}/> Cart 
                     <Badge className="absolute rounded-full bottom-5 bg-[#000000] text-[gold]">0</Badge>
                     </NavLink>
-                    <HoverCard>
-                <HoverCardTrigger onClick={(e)=> e.currentTarget} className="max-lg:flex hidden hover:text-[#ffffff] text-[gold]">
-                 < IoMdMenu size={32}/>
-                </HoverCardTrigger>
-                <HoverCardContent className="flex flex-col gap-2 hover:text-[#ffffff] bg-[#000000] text-[gold] text-center font-bold">
+                    <Popover>
+                <PopoverTrigger  asChild className="max-lg:flex hidden hover:text-[#ffffff] text-[gold]">
+                <Button variant="outline">< IoMdMenu size={32}/></Button> 
+                </PopoverTrigger>
+                <PopoverContent className="flex flex-col gap-2 hover:text-[#ffffff] bg-[#000000] text-[gold] text-center font-bold">
                     <NavLink className="border-solid border-[.2em] border-[gold]   py-1 " href="/dog">Dogs</NavLink>
                     <NavLink className="border-solid border-[.2em] border-[gold]   py-1"  href="/cat">Cats</NavLink>
                     <NavLink className="border-solid border-[.2em] border-[gold]   py-1"  href="/bird">Birds</NavLink>
                     <NavLink className="border-solid border-[.2em] border-[gold]   py-1"  href="/horse">Horses</NavLink>
                     <NavLink className="border-solid border-[.2em] border-[gold]   py-1"  href="/pharmacy">Pharmacy</NavLink>
                     <NavLink className="border-solid border-[.2em] border-[gold]   py-1"  href="/service">Services</NavLink>
-                </HoverCardContent>
-            </HoverCard>
+                </PopoverContent>
+            </Popover>
                 </nav>
             </section>
             <section className="">
