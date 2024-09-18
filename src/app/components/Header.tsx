@@ -24,7 +24,7 @@ import {IoMdMenu} from "react-icons/io"
     // }
     return (
         <header className="bg-[#090c9b] mb-[5em] max-lg:mb-[3em] w-full max-lg:h-32 h-44 fixed items-center  backdrop-blur-md z-20 ">
-            <section className="flex mt-1 items-center max-md:w-[0em] max-lg:gap-[1.5em] gap-32 max-lg:px-[0.4em] px-5">
+            <section className="flex mt-1 items-center max-md:gap-[0em] max-lg:gap-[1.3em] gap-32 max-lg:px-[0em] px-5">
                 <NavLink  className="font-mono flex max-lg:hidden hover:text-[#ffffff] items-center  text-[#e0c83d]" href="/">
                 <GiImperialCrown size={130} />
                 <h3 className=" text-[3rem] font-mono mt-[1em] font-bold">Monarch</h3>
