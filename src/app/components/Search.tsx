@@ -22,16 +22,16 @@ export default function Search() {
     return (
         <section>
            
-            <form className="relative w-1/4 max-lg:w-[8em] max-md:w-[3em] flex"  onSubmit={handleSubmit}>
+            <form className="relative w-[15em] max-lg:w-[8em] max-md:w-[3em] flex"  onSubmit={handleSubmit}>
             <Input  className="font-bold max-lg:flex hidden w-[8em] max-md:w-[3em] bg-[#ffffff] text-[1rem]  
                 text-[#000000]"
                 value={search}  type="text"   onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search for images"/>
-                <BsSearchHeartFill  className="absolute max-lg:flex max-md:right-[0] hidden max-lg:right-2 top-1" size={28}/> 
+                <BsSearchHeartFill  className="absolute max-lg:flex max-md:hidden hidden max-lg:right-2 top-1" size={28}/> 
 
 
-                <Input  className="font-bold flex max-lg:hidden bg-[rgb(255,255,255)]  text-2xl 
-                text-[#000000] w-full"
+                <Input  className="font-bold flex max-lg:hidden w-[15em] bg-[rgb(255,255,255)]  text-2xl 
+                text-[#000000]"
                 value={search}  type="text"   onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search for images"/>
                <BsSearchHeartFill  className="absolute max-lg:hidden right-0 top-1" size={35}/> 

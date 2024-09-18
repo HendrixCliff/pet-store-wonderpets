@@ -70,7 +70,7 @@ import {IoMdMenu} from "react-icons/io"
                     <Badge className="absolute rounded-full bottom-5 bg-[#000000] text-[gold]">0</Badge>
                     </NavLink>
                     <HoverCard>
-                <HoverCardTrigger onClick={(e)=> e.target} className="max-lg:flex hidden hover:text-[#ffffff] text-[gold]">
+                <HoverCardTrigger onClick={(e)=> e.currentTarget} className="max-lg:flex hidden hover:text-[#ffffff] text-[gold]">
                  < IoMdMenu size={32}/>
                 </HoverCardTrigger>
                 <HoverCardContent className="flex flex-col gap-2 hover:text-[#ffffff] bg-[#000000] text-[gold] text-center font-bold">
