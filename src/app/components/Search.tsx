@@ -21,7 +21,7 @@ export default function Search() {
 
     return (
             <form className="relative w-[15em] max-lg:w-[8em] max-md:w-[3em] flex"  onSubmit={handleSubmit}>
-                <Input  className="font-bold max-lg:w-[8em] max-md:w-[3em]  min-xl:w-[15em] bg-[hsl(0,0%,100%)]  text-2xl 
+                <Input  className="font-bold max-lg:w-[8em] max-md:w-[2em]  min-xl:w-[15em] bg-[hsl(0,0%,100%)]  text-2xl 
                 text-[#000000]"
                 value={search}  type="text"   onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search for images"/>

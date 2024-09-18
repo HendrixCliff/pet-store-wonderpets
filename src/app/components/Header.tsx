@@ -77,7 +77,7 @@ import {IoMdMenu} from "react-icons/io"
                     <Badge className="absolute rounded-full bottom-5 bg-[#000000] text-[gold]">0</Badge>
                     </NavLink>
                     <Popover>
-                <PopoverTrigger  asChild className="max-lg:flex hidden hover:text-[#ffffff] text-[gold]">
+                <PopoverTrigger  asChild className="max-lg:flex hidden hover:text-[#ffffff] bg-[#000000] text-[gold]">
                 <Button variant="outline">< IoMdMenu size={32}/></Button> 
                 </PopoverTrigger>
                 <PopoverContent className="flex flex-col gap-2 hover:text-[#ffffff] bg-[#000000] text-[gold] text-center font-bold">
