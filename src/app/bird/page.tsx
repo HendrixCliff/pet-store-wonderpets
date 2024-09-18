@@ -14,7 +14,7 @@ if (!images) {
  } 
  const photosWithBlur = await addBlurredDataUrls(images)
     return (
-     <section className=" px-2 my-3 mt-48 grid gap-2 grid-cols-gallery">
+     <section className=" px-2 my-3 mt-48 z-10 max-md:mt-[.3em] max-lg:mt-[.8em]  grid gap-2 grid-cols-gallery">
         { photosWithBlur.map( photo => {
         return  <ImgContainer key={photo.id}  photo={photo}/>}) }
     </section>
