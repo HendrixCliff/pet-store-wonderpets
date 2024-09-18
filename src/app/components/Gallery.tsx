@@ -13,19 +13,19 @@ type Props = {
 }
 
 export default async function Gallery({ topic = "pet", page}: Props) {
-let url = ''
+let url 
 
 if (topic === "pet" && page) {
       url = `https://api.pexels.com/v1/search?query=pet&per_page=30&page=${page}`
 }
- else if (topic === "pet") { 
+ else if (topic === "pet" && !page) { 
       url = `https://api.pexels.com/v1/search?query=pet&per_page=30&page=1`
  }
- else if (!page ) {
-      url = `https://api.pexels.com/v1/search?query=${topic}&per_page=15&page=1`
+ else if (topic !== "pet" && page) {
+      url = `https://api.pexels.com/v1/search?query=${topic}&per_page=15&page=${page}`
  }
- else{
- url = `https://api.pexels.com/v1/search?query=${topic}per_page=15&page=${page}`
+ else {
+ url = `https://api.pexels.com/v1/search?query=${topic}per_page=15&page=1`
  }
      
 const images: ImagesResults | undefined = await fetchImages(url)
