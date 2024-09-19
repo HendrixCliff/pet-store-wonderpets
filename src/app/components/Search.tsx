@@ -4,6 +4,7 @@ import { useState, FormEvent} from "react"
 import  { useRouter } from 'next/navigation'
 import { Input } from "@/components/ui/input"
 import {  BsSearchHeartFill } from 'react-icons/bs'
+import { Button } from "@/components/ui/button"
 
 
 
@@ -25,7 +26,7 @@ export default function Search() {
                 text-[#000000]"
                 value={search}  type="text"   onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search for images"/>
-               <BsSearchHeartFill  className="absolute max-lg:hidden flex right-0 top-1" size={35}/> 
+               <Button><BsSearchHeartFill  className="absolute max-lg:hidden flex right-0 top-1" size={35}/> </Button> 
            
             </form>
      

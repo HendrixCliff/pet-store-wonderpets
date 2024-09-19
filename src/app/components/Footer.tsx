@@ -25,14 +25,13 @@ if (!prevPage && !nextPage) return
             <Link href={`/results/${topic}/${nextPage}}`} className={!nextPage ? "mx-auto" : ""}>
               &lt;&lt;&lt; {!nextPage ? "back" : ""}
              </Link>
-             {pageNums.map(num => (
-                page && num === parseInt(page) ? num 
-                : (
-                <Link key={num} href={`/results/${topic}/${num}`} className="underline">
-                 {num}
-               </Link>)
-             ))}
-            
+                {pageNums.map(num => (
+                    page && num === parseInt(page) ? num 
+                    : (
+                    <Link key={num} href={`/results/${topic}/${num}`} className="underline">
+                    {num}
+                </Link>))
+                )}
         </>
        
     ): null
@@ -43,13 +42,7 @@ if (!prevPage && !nextPage) return
             <Link href={`/results/${topic}/${prevPage}}`} className={!prevPage ? "mx-auto" : ""}>
                {!prevPage ? "more" : "" } &gt;&gt;&gt;{!prevPage ? "more" : ""}
              </Link>
-             {pageNums.map(num => (
-                page && num === parseInt(page) ? num 
-                : (
-                <Link key={num} href={`/results/${topic}/${num}`} className="underline">
-                 {num}
-               </Link>)
-             ))}
+             
         </>
        
     ): null
