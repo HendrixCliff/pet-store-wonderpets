@@ -50,7 +50,7 @@ if (!prevPage && !nextPage) return
     return (
         <footer className="flex flex-row justify-between p-5 
         text-lg bg-[#000000] text-[gold] items-center
-        py-4 font-bold w-[6em] max-lg:w-[4em] mx-auto"> 
+        py-4 font-bold w-[8em] max-md:w-[3em]  max-lg:w-[4em] mx-auto"> 
             {prevPageArea}
             {nextPageArea}
           
