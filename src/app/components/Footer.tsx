@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 type Props = {
-    topic: string | undefined,
+    topic: string,
     page: string | undefined,
     prevPage: string | null,
     nextPage: string | null,
@@ -25,6 +25,13 @@ if (!prevPage && !nextPage) return
             <Link href={`/results/${topic}/${nextPage}}`} className={!nextPage ? "mx-auto" : ""}>
               &lt;&lt;&lt; {!nextPage ? "back" : ""}
              </Link>
+             {pageNums.map(num => (
+                page && num === parseInt(page) ? num 
+                : (
+                <Link key={num} href={`/results/${topic}/${num}`} className="underline">
+                 {num}
+               </Link>)
+             ))}
             
         </>
        

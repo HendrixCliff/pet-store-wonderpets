@@ -1,12 +1,8 @@
 'use client'
 
 import NavLink from "next/link"
+
 import {
-    HoverCard,
-    HoverCardContent,
-    HoverCardTrigger,
-  } from "@/components/ui/hover-card"
-  import {
     Popover,
     PopoverContent,
     PopoverTrigger,
@@ -42,12 +38,12 @@ import {IoMdMenu} from "react-icons/io"
                 </NavLink>
                 <Search/>
                 <nav className="flex text-[gold] max-lg:ml-[1em] ml-36 items-center max-lg:gap-[2.7em] max-md:gap-[0em] max-md:ml-[0em] gap-10 max-lg:text-[1rem] text-lg font-bold">
-                    <HoverCard>
-                        <HoverCardTrigger className="flex hover:text-[#ffffff] text-center items-center ">
+                    <Popover>
+                        <PopoverTrigger className="flex hover:text-[#ffffff] text-center items-center ">
                        <section className="flex flex-col max-lg:hidden"><h3> 24/7</h3> <h3>Help</h3> </section>  <FaRocketchat className="flex max-lg:hidden" size={35}/>
                        <section className=" max-lg:flex-col max-lg:flex hidden"><h3> 24/7</h3> <h3>Help</h3> </section>  <FaRocketchat className="hidden max-lg:flex" size={20}/>
-                        </HoverCardTrigger>
-                        <HoverCardContent>
+                        </PopoverTrigger>
+                        <PopoverContent>
                         <h3>Get help from our experts </h3>
                         <h3 className="font-bold text-[1.2rem]">1-800-672 4399</h3>
                         <section className="flex">
@@ -60,8 +56,8 @@ import {IoMdMenu} from "react-icons/io"
                         <NavLink href="/shipinfo">  -   Shipping info</NavLink>
                        </section>
                        
-                        </HoverCardContent>
-                    </HoverCard>
+                        </PopoverContent>
+                    </Popover>
                     <NavLink  className="flex max-lg:hidden hover:text-[#ffffff] items-center" href="/account" >
                     <RiAccountCircleFill size={35}/>  Account
                     </NavLink>
@@ -77,7 +73,7 @@ import {IoMdMenu} from "react-icons/io"
                     <Badge className="absolute rounded-full bottom-5 bg-[#000000] text-[gold]">0</Badge>
                     </NavLink>
                     <Popover>
-                <PopoverTrigger  asChild className="max-lg:flex hidden hover:text-[#ffffff] bg-[#000000] text-[gold]">
+                <PopoverTrigger  asChild className="max-lg:flex hidden  bg-[#000000] text-[gold]">
                 <Button variant="outline">< IoMdMenu size={32}/></Button> 
                 </PopoverTrigger>
                 <PopoverContent className="flex flex-col gap-2 hover:text-[#ffffff] bg-[#000000] text-[gold] text-center font-bold">

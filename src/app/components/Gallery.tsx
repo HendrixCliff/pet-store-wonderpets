@@ -22,10 +22,10 @@ if (topic === "pet" && page) {
       url = `https://api.pexels.com/v1/search?query=pet&per_page=30&page=1`
  }
  else if (topic !== "pet" && page) {
-      url = `https://api.pexels.com/v1/search?query=${topic}&per_page=15&page=${page}`
+      url = `https://api.pexels.com/v1/search?query=${topic}&per_page=35&page=${page}`
  }
  else {
- url = `https://api.pexels.com/v1/search?query=${topic}per_page=15&page=1`
+ url = `https://api.pexels.com/v1/search?query=${topic}per_page=35&page=1`
  }
      
 const images: ImagesResults | undefined = await fetchImages(url)
