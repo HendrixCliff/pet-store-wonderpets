@@ -15,17 +15,17 @@ type Props = {
 export default async function Gallery({ topic = "pet", page}: Props) {
 let url 
 
-if (topic === "pet" && page) {
-      url = `https://api.pexels.com/v1/search?query=pet&per_page=30&page=${page}`
-}
- else if (topic === "pet" && !page) { 
+if (topic === "pet" && !page) {
       url = `https://api.pexels.com/v1/search?query=pet&per_page=30&page=1`
+}
+ else if (topic !== "pet" && !page) { 
+      url = `https://api.pexels.com/v1/search?query=${topic}&per_page=30&page=1`
  }
  else if (topic !== "pet" && page) {
       url = `https://api.pexels.com/v1/search?query=${topic}&per_page=35&page=${page}`
  }
  else {
- url = `https://api.pexels.com/v1/search?query=${topic}per_page=35&page=1`
+ url = `https://api.pexels.com/v1/search?query=pet&per_page=35&page=${page}`
  }
      
 const images: ImagesResults | undefined = await fetchImages(url)
